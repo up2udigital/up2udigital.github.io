@@ -8,7 +8,7 @@
     <meta name="keywords" content="HTML5, CSS">
     <meta name="author" content="Pedro Manrique">
     <meta name="robots" content="noindex">
-    <title>Document</title>
+    <title>WebSimple</title>
     <style>
         @font-face {
             font-family:"MiFont";
@@ -22,7 +22,7 @@
             'Helvetica Neue', sans-serif;
         }
         body{
-            background-color: gray;
+            
         }
         header{
             min-height: 18vh;
@@ -34,9 +34,11 @@
         nav{
             background-color: #000;
             width: 100%;
-            float: left;
+float: left;
+            height: auto;
             position: relative;
         }
+    /*     nav ul{position: relative; width: 80%; margin: 0 auto;} */
         nav li{
             float: left;
             list-style: none;
@@ -58,9 +60,29 @@
         #back-video{
             position: fixed;
             height: 100vh;
-            z-index: 0;
+            z-index: -1;
             margin: 0;
             padding: 0;
+        }
+        #wrapper{
+            float: left;
+            width: 100%;
+            min-height: 100vh;
+            padding: 0;
+            
+        }
+        #wrapper{background: rgba(128, 128, 128, 0.5);}
+        .container{
+            position: relative;
+            z-index: 1000;
+            width: 100%;
+            height: auto;
+        }
+        article{
+            position: relative;
+            margin: 10px auto;
+            width: 80%;
+            background: orangered;
         }
         section{
           
@@ -68,11 +90,12 @@
     </style>
 </head>
 <body>
-    <video id="back-video" autoplay loop muted>
+        <video id="back-video" autoplay loop muted>
             <source src="assets/social_media.mp4" type="video/mp4">
         </video>
     <header>
         <h1>Cabecera de la Página Web</h1>
+        
     </header>
     <nav>
         <ul>
@@ -82,6 +105,7 @@
         </ul>
         <div class="about">Login</div>
     </nav>
+<div id="wrapper">
     <div class="container">
         <article>
             <section class="art-cabecera">
@@ -97,8 +121,9 @@
             </section>
         </article>
     </div>
-    
+</div>
+
     <aside></aside>
-    <footer></footer>
+    <footer>El footer</footer>
 </body>
 </html>
